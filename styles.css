@@ -123,13 +123,12 @@ p {
 }
 
 .category-left {
-  flex: 3;
-  background-color: #fbe3d7;
+  width: 50%; /* Left half */
+  background-color: #f0f0f0;
   display: flex;
-  justify-content: space-around;
-  width: 550px;
-  height: 450px;
+  justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .category-left .left-text {
@@ -157,10 +156,12 @@ p {
 }
 
 .category-right {
-  flex: 2;
+  width: 50%; /* Right half */
+  background-color: #e0e0e0;
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  flex-direction: column; /* Stack containers vertically */
+  justify-content: space-between; /* Evenly distribute space between containers */
+  padding: 20px;
 }
 
 .men-fashion {
@@ -307,4 +308,22 @@ p {
 
 .products .product-bar h5 {
   font-size: 40px;
+}
+
+/* Q&A */
+.box {
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Make all containers equal in height */
+  margin: 1px 1px; /* Add space between containers */
+  padding: 10px;
+}
+
+/* Ensure images are responsive and maintain equal size */
+.box img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover; /* Ensure the image covers the container without distorting the aspect ratio */
 }
